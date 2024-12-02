@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples with Outputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+            color: #333;
+            animation: fadeInBody 1.5s ease-in-out;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-out;
+        }
+
+        .example-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 800px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .code {
+            font-family: monospace;
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .output {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f7f9fc;
+            border: 1px solid #d4e7d4;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: linear-gradient(to right, #56ab2f, #a8e063);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .output-box {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .counter {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+            animation: pulse 1.5s infinite;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Examples with Outputs</h1>
+    </header>
+
+    <section>
+        <!-- Alert Example -->
+        <div class="example-container">
+            <h2>JavaScript Example 1: Alert Box</h2>
+            <div class="code">
+                <pre>
+/* JavaScript */
+function showAlert() {
+    alert('Hello! This is a JavaScript Alert Box!');
+}
+                </pre>
+            </div>
+            <div class="output">
+                <button class="btn" onclick="showAlert()">Click Me</button>
+            </div>
+        </div>
+
+        <!-- Change Text Content -->
+        <div class="example-container">
+            <h2>JavaScript Example 2: Change Text Content</h2>
+            <div class="code">
+                <pre>
+/* JavaScript */
+function changeText() {
+    document.getElementById('text-output').innerHTML = 'The text has been changed!';
+}
+                </pre>
+            </div>
+            <div class="output">
+                <p id="text-output" style="font-size: 1.2rem; color: #555;">Click the button to change this text.</p>
+                <button class="btn" onclick="changeText()">Change Text</button>
+            </div>
+        </div>
+
+        <!-- Change Background Color -->
+        <div class="example-container">
+            <h2>JavaScript Example 3: Change Background Color</h2>
+            <div class="code">
+                <pre>
+/* JavaScript */
+function changeBackgroundColor() {
+    document.body.style.backgroundColor ='#b3e5fc';
+}
+                </pre>
+            </div>
+            <div class="output">
+                <button class="btn" onclick="changeBackgroundColor()">Change Background</button>
+            </div>
+        </div>
+
+        <!-- Counter -->
+        <div class="example-container">
+            <h2>JavaScript Example 4: Counter</h2>
+            <div class="code">
+                <pre>
+/* JavaScript */
+let count = 0;
+function increment() {
+    count++;
+    document.getElementById('counter').innerHTML = count;
+}
+
+function decrement() {
+    count--;
+    document.getElementById('counter').innerHTML = count;
+}
+                </pre>
+            </div>
+            <div class="output">
+                <div class="output-box">
+                    <span id="counter" class="counter">0</span>
+                </div>
+                <button class="btn" onclick="increment()">Increment</button>
+                <button class="btn" onclick="decrement()">Decrement</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JavaScript Learning Project</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert('Hello! This is a JavaScript Alert Box!');
+        }
+
+        function changeText() {
+            document.getElementById('text-output').innerHTML = 'The text has been changed!';
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = '#b3e5fc';
+        }
+
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById('counter').innerHTML = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById('counter').innerHTML = count;
+        }
+    </script>
+</body>
+</html>

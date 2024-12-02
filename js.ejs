@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Guide: Everything You Need to Know</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #c7254e;
+            background-color: #f9f2f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .example {
+            background-color: #e7f5e9;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript Guide: Everything You Need to Know</h1>
+        <p>Your comprehensive guide to mastering JavaScript</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction -->
+        <h2>Introduction to JavaScript</h2>
+        <p>
+            JavaScript is a <strong>scripting language</strong> that allows you to create dynamic and interactive content on websites. It is widely used for web development, mobile apps, game development, and more. JavaScript can run on both the client side (in the browser) and the server side (with Node.js).
+        </p>
+
+        <!-- Getting Started -->
+        <h2>Getting Started with JavaScript</h2>
+        <p>
+            You can include JavaScript in your HTML file in three ways:
+        </p>
+        <ul>
+            <li>Inline JavaScript</li>
+            <li>Internal JavaScript</li>
+            <li>External JavaScript</li>
+        </ul>
+
+        <!-- Example Code -->
+        <div class="example">
+            <h3>Example: Inline JavaScript</h3>
+            <pre><code>&lt;button onclick="alert('Hello, World!')"&gt;Click Me&lt;/button&gt;</code></pre>
+        </div>
+
+        <!-- JavaScript Basics -->
+        <h2>JavaScript Basics</h2>
+        <h3>1. Variables</h3>
+        <p>Variables are used to store data values. You can declare variables using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+        <pre><code>let name = 'Alice';
+const age = 25;
+var isStudent = true;</code></pre>
+
+        <h3>2. Data Types</h3>
+        <p>JavaScript supports various data types:</p>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>Array</li>
+            <li>Object</li>
+            <li>Null</li>
+            <li>Undefined</li>
+        </ul>
+
+        <h3>3. Functions</h3>
+        <p>Functions are blocks of code designed to perform a particular task.</p>
+        <pre><code>function greet() {
+    return 'Hello, World!';
+}
+console.log(greet());</code></pre>
+
+        <h3>4. Conditional Statements</h3>
+        <p>JavaScript supports <code>if</code>, <code>else if</code>, and <code>else</code> statements.</p>
+        <pre><code>let hour = 10;
+if (hour &lt; 12) {
+    console.log('Good Morning');
+} else {
+    console.log('Good Evening');
+}</code></pre>
+
+        <!-- Loops -->
+        <h2>Loops</h2>
+        <h3>1. For Loop</h3>
+        <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}</code></pre>
+
+        <h3>2. While Loop</h3>
+        <pre><code>let i = 0;
+while (i &lt; 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+
+        <!-- Arrays -->
+        <h2>Working with Arrays</h2>
+        <p>Arrays are used to store multiple values in a single variable.</p>
+        <pre><code>let fruits = ['Apple', 'Banana', 'Cherry'];
+console.log(fruits[1]); // Output: Banana</code></pre>
+
+        <!-- Objects -->
+        <h2>JavaScript Objects</h2>
+        <p>Objects are collections of key-value pairs.</p>
+        <pre><code>let car = {
+    brand: 'Toyota',
+    model: 'Corolla',
+    year: 2023
+};
+console.log(car.model); // Output: Corolla</code></pre>
+
+        <!-- DOM Manipulation -->
+        <h2>DOM Manipulation</h2>
+        <p>JavaScript can be used to change the content of HTML elements.</p>
+        <pre><code>document.getElementById('demo').innerHTML = 'Hello, JavaScript!';</code></pre>
+
+        <h3>Example:</h3>
+        <div class="example">
+            <p id="demo">Click the button to change this text:</p>
+            <button onclick="document.getElementById('demo').innerHTML = 'Text changed!'">Change Text</button>
+        </div>
+
+        <!-- Event Handling -->
+        <h2>Event Handling</h2>
+        <p>JavaScript can respond to user actions using event listeners.</p>
+        <pre><code>document.getElementById('myButton').addEventListener('click', function() {
+    alert('Button clicked!');
+});</code></pre>
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+        <p>
+            JavaScript is a versatile and powerful language that is essential for web development. By mastering JavaScript, you can create dynamic, interactive, and responsive websites.
+        </p>
+
+        <footer>
+            <p>Learn more about JavaScript on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs</a>.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
