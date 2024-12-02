@@ -1,0 +1,25 @@
+*{
+    background:steelblue;
+}
+.aside{
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.main{
+    display:inline-flex ;
+    font-size: 20px;
+    font-weight: 400;
+    
+    
+    row-gap: 200px;
+}
+.footer{
+    display:inline-flexbox;
+    text-align: right;
+    margin-right: 20px;
+    padding-right: 20px;
+}

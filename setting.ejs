@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Settings</title>
+  <style>
+    /* Basic Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color:#45a049;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    /* Settings Page Styles */
+    .settings-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .settings-container h2 {
+      margin-bottom: 20px;
+    }
+    .settings-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .settings-item:last-child {
+      border-bottom: none;
+    }
+    .settings-item label {
+      font-size: 16px;
+    }
+    .settings-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+    .save-button {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .save-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <p align="center"><font size="40px" weight="600px">Setting</font></p>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">Journey to Code</a>
+    </div>
+    <div class="menu">
+      <a href="dashboard.html">Home</a>
+      <a href="#">About</a>
+      <a href="#settings">Settings</a>
+    </div>
+  </div>
+<div id="settings" class="settings-container">
+     <h2>⚙️ Settings</h2>
+     <div class="settings-item">
+       <label for="dark-mode">
+         <i class="fas fa-moon"></i> Enable Dark Mode
+       </label>
+       <label class="switch">
+         <input type="checkbox" id="dark-mode">
+         <span class="slider"></span>
+       </label>
+     </div>
+     <div class="settings-item">
+       <label for="notifications">
+         <i class="fas fa-bell"></i> Enable Notifications
+       </label>
+       <label class="switch">
+         <input type="checkbox" id="notifications">
+         <span class="slider"></span>
+       </label>
+     </div>
+     <div class="settings-item">
+       <label for="sound">
+         <i class="fas fa-volume-up"></i> Enable Sound
+       </label>
+       <label class="switch">
+         <input type="checkbox" id="sound">
+         <span class="slider"></span>
+       </label>
+     </div>
+     <div class="settings-item">
+       <label for="language">
+         <i class="fas fa-language"></i> Preferred Language
+       </label>
+       <select id="language">
+         <option value="english">English</option>
+         <option value="hindi">Hindi</option>
+         <option value="spanish">Spanish</option>
+       </select>
+     </div>
+     <button class="save-button" onclick="saveSettings()">Save Settings</button>
+   </div>
+ 
+   <script>
+     // Save Settings Functionality
+     function saveSettings() {
+       const darkMode = document.getElementById('dark-mode').checked;
+       const notifications = document.getElementById('notifications').checked;
+       const sound = document.getElementById('sound').checked;
+       const language = document.getElementById('language').value;
+ 
+       alert(`Settings Saved:
+ - Dark Mode: ${darkMode}
+ - Notifications: ${notifications}
+ - Sound: ${sound}
+ - Preferred Language: ${language}`);
+     }
+   </script>
+ </body>
+ </html>
+ 

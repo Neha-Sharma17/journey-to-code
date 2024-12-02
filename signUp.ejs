@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 5px;
+        }
+        .btn a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sign-up-form">
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullName" placeholder="Full Name" required pattern="[A-Za-z\s]+" title="Only alphabets allowed">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phoneNumber" placeholder="Phone Number" required pattern="\d{10}" title="10-digit phone number only">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="sign-in">
+                    <p>Already have an account? <a href="login.html">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('signupForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validate input fields
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            // Prepare the data to send to the backend
+            const userData = {
+                fullName,
+                email,
+                phoneNumber,
+                password,
+                confirmPassword
+            };
+
+            // Send the data to the server
+            fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'User registered successfully') {
+                    alert('Account created successfully');
+                    window.location.href = 'dashboard.html';
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(err => console.log(err));
+        });
+    </script>
+</body>
+</html>
