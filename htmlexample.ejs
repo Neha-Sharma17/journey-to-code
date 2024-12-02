@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Examples</title>
+    <style>
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1169a4;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1, h2 {
+            color: #020405;
+            text-align: center;
+        }
+
+        .examples h2 {
+            text-decoration: underline;
+        }
+
+        .code-example {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .code-example:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .code {
+            font-family: monospace;
+            background-color: #333;
+            color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .output {
+            background-color: #eef9ee;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid #d4e7d4;
+        }
+
+        .output-heading {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2b6e2b;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004d80;
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Examples</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="Guide.html">Guide Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="examples">
+        <h2>HTML Example 1: Basic Structure</h2>
+        <div class="code-example">
+            <pre class="code">
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;This is my first HTML example.&lt;/p&gt;
+            </pre>
+            <div class="output">
+                <div class="output-heading">Output:</div>
+                <h1>Hello World</h1>
+                <p>This is my first HTML example.</p>
+            </div>
+        </div>
+        <h2>HTML Example 2: List Tag</h2>
+        <div class="code-example">
+            <pre class="code">
+&lt;ul&gt;
+ &lt;li&gt;Item 1&lt;/li&gt;
+ &lt;li&gt;Item 2&lt;/li&gt;
+ &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+            <div class="output">
+                <div class="output-heading">Output:</div>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <section class="examples">
+            <h2>HTML Example 3: Semantic Tags</h2>
+            <div class="code-example">
+                <pre class="code">
+       &lt;article&gt;
+        &lt;h2&gt;What is HTML?&lt;/h2&gt;
+        &lt;p&gt;HTML stands for HyperText Markup Language.&lt;/p&gt;
+       &lt;/article&gt;
+                </pre>
+                <div class="output">
+                    <div class="output-heading">Output:</div>
+                    <article>
+                        <h2>What is HTML?</h2>
+                        <p>HTML stands for HyperText Markup Language.</p>
+                    </article>
+                </div>
+            </div>
+  
+       <h2>HTML Example 4: Form with Button</h2>
+       <div class="code-example">
+           <pre class="code">
+  &lt;form&gt;
+   &lt;label for="name"&gt;Name:&lt;/label&gt;
+   &lt;input type="text" id="name" placeholder="Enter your name"&gt;&lt;br&gt;
+   &lt;label for="email"&gt;Email:&lt;/label&gt;
+   &lt;input type="email" id="email" placeholder="Enter your email"&gt;&lt;br&gt;
+   &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+           </pre>
+           <div class="output">
+               <div class="output-heading">Output:</div>
+               <form>
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" placeholder="Enter your name"><br>
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" placeholder="Enter your email"><br>
+                   <button type="submit">Submit</button>
+               </form>
+           </div>
+       </div>
+   </section>
+
+  <h2>HTML Example 5: Table Tag</h2>
+  <div class="code-example">
+      <pre class="code">
+&lt;table border="1"&gt;
+&lt;tr&gt;
+  &lt;th&gt;Name&lt;/th&gt;
+  &lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Alice&lt;/td&gt;
+  &lt;td&gt;24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Bob&lt;/td&gt;
+  &lt;td&gt;28&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+      <div class="output">
+        <div class="output-heading">Output:</div>
+          <table border="1">
+              <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+              </tr>
+              <tr>
+                  <td>Alice</td>
+                  <td>24</td>
+              </tr>
+              <tr>
+                  <td>Bob</td>
+                  <td>28</td>
+              </tr>
+          </table>
+      </div>
+  </div>   
+    </section>
+    <footer>
+        <p>&copy; 2024 HTML Learning Project</p>
+    </footer>
+</body>
+</html>

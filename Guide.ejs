@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+   /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #ffc3a0;
+    border-bottom: 2px solid #f08a5d;
+}
+
+h1 {
+    color: #d35562;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5d4954;
+    font-weight: bold;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px auto;  /* This will center the sections */
+    padding: 20px;
+    background: #ffe3e3;
+    border: 2px dashed #f4978e;
+    border-radius: 10px;
+    max-width: 80%; /* Set max-width to limit the width */
+    width: 80%; /* Set width for responsive design */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.intro h2 {
+    color: #c85554;
+}
+
+.intro a {
+    text-decoration: none;
+    color: #f67280;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #f8a5c2;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Hover Effect */
+.intro a:hover {
+    background: #f67280;
+    color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #fce1e4;
+    color: #bc4b51;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Curtain Animation */
+.curtain {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    z-index: 10;
+    animation: curtainOpen 4s ease-in-out forwards;
+}
+
+.curtain.left {
+    left: 0;
+    animation-delay: 0s;
+}
+
+.curtain.right {
+    right: 0;
+    animation-delay: 0.5s;
+}
+
+@keyframes curtainOpen {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+</style>
+<body>
+    <div class="curtain left"></div>
+    <div class="curtain right"></div>
+    <header>
+        <h1>Welcome to Coding Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="assignment-home.html">Task</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>Learn HTML with examples</h2>
+        <p>Click on the links to explore more.</p>
+        <a href="htmlexample.html">Explore</a>
+    </section>
+    <section class="intro">
+        <h2>Learn CSS with examples</h2>
+        <p>Click on the links to explore more.</p>
+        <a href="cssexample.html">Explore</a>
+    </section>
+    <section class="intro">
+        <h2>Learn JavaScript with examples</h2>
+        <p>Click on the links to explore more.</p>
+        <a href="jsexamp.html">Explore</a>
+    </section>
+    <section class="intro">
+        <h2>Learn PYTHON with examples</h2>
+        <p>Click on the links to explore more.</p>
+        <a href="pyexample.html">Explore</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 HTML Learning Project</p>
+    </footer>
+</body>
+</html>
