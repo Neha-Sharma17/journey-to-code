@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Examples with Outputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient Background */
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #4CAF50; /* Vibrant green */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .curtain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff6a00, #ee0979); /* Colourful curtain */
+            z-index: 9999;
+            animation: openCurtains 2s ease-in-out forwards;
+        }
+
+        .curtain-right {
+            left: auto;
+            right: 0;
+        }
+
+        @keyframes openCurtains {
+            from {
+                width: 50%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+
+        .example-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            animation: fadeIn 2s ease-in;
+            background: #fff;
+            border: 2px solid #ff7e5f; /* Border with vibrant colour */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .code {
+            font-family: monospace;
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .output {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f4f4f9;
+            border: 1px solid #ff7e5f;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #ff6a00; /* Bright orange title */
+        }
+
+        .example-container:hover {
+            background-color: #fffbf0; /* Light hover effect */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Curtains -->
+    <div class="curtain"></div>
+    <div class="curtain curtain-right"></div>
+
+    <header>
+        <h1>Python Examples with Outputs</h1>
+    </header>
+
+    <section>
+        <!-- Example 1 -->
+        <div class="example-container">
+            <h2>Python Example 1: Hello World</h2>
+            <div class="code">
+                <pre>
+# Python Code
+print("Hello, World!")
+                </pre>
+            </div>
+            <div class="output">
+                <strong>Output:</strong>
+                <p>Hello, World!</p>
+            </div>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-container">
+            <h2>Python Example 2: Simple Arithmetic</h2>
+            <div class="code">
+                <pre>
+# Python Code
+a = 10
+b = 5
+sum = a + b
+print("Sum:", sum)
+                </pre>
+            </div>
+            <div class="output">
+                <strong>Output:</strong>
+                <p>Sum: 15</p>
+            </div>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-container">
+            <h2>Python Example 3: If-Else Conditions</h2>
+            <div class="code">
+                <pre>
+# Python Code
+num = 7
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+                </pre>
+            </div>
+            <div class="output">
+                <strong>Output:</strong>
+                <p>Odd Number</p>
+            </div>
+        </div>
+      <!-- For and While Loops -->
+      <div class="example-container">
+          <h2>Python Example 4: Loops</h2>
+          <div class="code">
+              <pre>
+# Python Code (For Loop)
+for i in range(1, 6):
+  print(i)
+
+# Python Code (While Loop)
+n = 5
+while n > 0:
+  print(n)
+  n -= 1
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>1<br>2<br>3<br>4<br>5</p>
+              <p>5<br>4<br>3<br>2<br>1</p>
+          </div>
+      </div>
+
+      <!-- Functions -->
+      <div class="example-container">
+          <h2>Python Example 5: Functions</h2>
+          <div class="code">
+              <pre>
+# Python Code
+def greet(name):
+  return f"Hello, {name}!"
+
+message = greet("Alice")
+print(message)
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>Hello, Alice!</p>
+          </div>
+      </div>
+      <!-- List Operations -->
+      <div class="example-container">
+          <h2>Python Example 6: List Operations</h2>
+          <div class="code">
+              <pre>
+# Python Code
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+fruits.remove("banana")
+print(fruits)
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>['apple', 'cherry', 'orange']</p>
+          </div>
+      </div>
+
+      <!-- Dictionary Manipulation -->
+      <div class="example-container">
+          <h2>Python Example 7: Dictionary Manipulation</h2>
+          <div class="code">
+              <pre>
+# Python Code
+student = {"name": "John", "age": 21, "course": "CS"}
+student["age"] = 22
+student["grade"] = "A"
+print(student)
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>{'name': 'John', 'age': 22, 'course': 'CS', 'grade': 'A'}</p>
+          </div>
+      </div>
+
+      <!-- String Formatting -->
+      <div class="example-container">
+          <h2>Python Example 8: String Formatting</h2>
+          <div class="code">
+              <pre>
+# Python Code
+name = "Alice"
+age = 25
+greeting = f"Hello, my name is {name} and I am {age} years old."
+print(greeting)
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>Hello, my name is Alice and I am 25 years old.</p>
+          </div>
+      </div>
+
+      <!-- File Handling -->
+      <div class="example-container">
+          <h2>Python Example 9: File Handling</h2>
+          <div class="code">
+              <pre>
+# Python Code
+with open("example.txt", "w") as file:
+  file.write("This is a test file.")
+  
+with open("example.txt", "r") as file:
+  content = file.read()
+  print(content)
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>This is a test file.</p>
+          </div>
+      </div>
+
+      <!-- Class and Object -->
+      <div class="example-container">
+          <h2>Python Example 10: Class and Object Basics</h2>
+          <div class="code">
+              <pre>
+# Python Code
+class Person:
+  def __init__(self, name, age):
+      self.name = name
+      self.age = age
+
+  def introduce(self):
+      return f"My name is {self.name} and I am {self.age} years old."
+
+person1 = Person("Bob", 30)
+print(person1.introduce())
+              </pre>
+          </div>
+          <div class="output">
+              <strong>Output:</strong>
+              <p>My name is Bob and I am 30 years old.</p>
+          </div>
+      </div>  
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Python Learning Project</p>
+    </footer>
+
+    <script>
+        // Ensure curtain animation completes before interacting
+        window.addEventListener("load", () => {
+            const curtains = document.querySelectorAll(".curtain");
+            curtains.forEach((curtain) => {
+                curtain.addEventListener("animationend", () => {
+                    curtain.style.display = "none";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

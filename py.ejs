@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Guide: Everything You Need to Know</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: #e7f5e9;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #c7254e;
+        }
+
+        .example {
+            background-color: #e7f5e9;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Python Guide: Everything You Need to Know</h1>
+        <p>Your ultimate guide to mastering Python programming</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction -->
+        <h2>Introduction to Python</h2>
+        <p>
+            Python is a <strong>high-level, interpreted, and general-purpose programming language</strong> that emphasizes code readability. Created by <strong>Guido van Rossum</strong> and first released in 1991, Python is known for its simple syntax, making it a great choice for beginners and experienced developers alike.
+        </p>
+
+        <!-- Getting Started -->
+        <h2>Getting Started with Python</h2>
+        <p>You can install Python from the <a href="https://www.python.org/downloads/" target="_blank">official website</a>. To verify the installation, run the following command in your terminal:</p>
+        <pre><code>python --version</code></pre>
+
+        <!-- Basic Syntax -->
+        <h2>Basic Syntax</h2>
+        <h3>Hello, World!</h3>
+        <p>Let's start with a simple "Hello, World!" program:</p>
+        <pre><code>print("Hello, World!")</code></pre>
+
+        <!-- Variables & Data Types -->
+        <h2>Variables & Data Types</h2>
+        <p>Python supports different data types, including:</p>
+        <ul>
+            <li><code>int</code> (Integer)</li>
+            <li><code>float</code> (Floating point number)</li>
+            <li><code>str</code> (String)</li>
+            <li><code>bool</code> (Boolean)</li>
+            <li><code>list</code> (List)</li>
+            <li><code>tuple</code> (Tuple)</li>
+            <li><code>dict</code> (Dictionary)</li>
+            <li><code>set</code> (Set)</li>
+        </ul>
+
+        <!-- Examples -->
+        <div class="example">
+            <h3>Example: Declaring Variables</h3>
+            <pre><code>name = "Alice"
+age = 30
+is_student = False
+
+print(name, age, is_student)</code></pre>
+        </div>
+
+        <!-- Conditional Statements -->
+        <h2>Conditional Statements</h2>
+        <p>Python supports <code>if</code>, <code>elif</code>, and <code>else</code> statements:</p>
+        <pre><code>num = 10
+if num > 0:
+    print("Positive number")
+elif num < 0:
+    print("Negative number")
+else:
+    print("Zero")</code></pre>
+
+        <!-- Loops -->
+        <h2>Loops</h2>
+        <h3>For Loop</h3>
+        <pre><code>for i in range(5):
+    print(i)</code></pre>
+
+        <h3>While Loop</h3>
+        <pre><code>count = 0
+while count < 5:
+    print(count)
+    count += 1</code></pre>
+
+        <!-- Functions -->
+        <h2>Functions</h2>
+        <p>Functions are defined using the <code>def</code> keyword:</p>
+        <pre><code>def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))</code></pre>
+
+        <!-- Lists -->
+        <h2>Working with Lists</h2>
+        <pre><code>fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits)</code></pre>
+
+        <!-- Dictionaries -->
+        <h2>Dictionaries</h2>
+        <pre><code>person = {
+    "name": "John",
+    "age": 30
+}
+print(person["name"])</code></pre>
+
+        <!-- Classes & Objects -->
+        <h2>Object-Oriented Programming</h2>
+        <p>Python supports object-oriented programming (OOP). Here's an example of a simple class:</p>
+        <pre><code>class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def show(self):
+        return f"{self.brand} {self.model}"
+
+my_car = Car("Toyota", "Corolla")
+print(my_car.show())</code></pre>
+
+        <!-- Exception Handling -->
+        <h2>Exception Handling</h2>
+        <pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("Execution complete")</code></pre>
+
+        <!-- File Handling -->
+        <h2>File Handling</h2>
+        <pre><code># Writing to a file
+with open("test.txt", "w") as file:
+    file.write("Hello, World!")
+
+# Reading from a file
+with open("test.txt", "r") as file:
+    content = file.read()
+    print(content)</code></pre>
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+        <p>Python is a versatile language that you can use for web development, data science, machine learning, automation, and more. Whether you're a beginner or an experienced developer, Python is a great choice to add to your skill set.</p>
+        
+        <footer>
+            <p>Learn more about Python on the <a href="https://docs.python.org/3/" target="_blank">official documentation</a>.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
