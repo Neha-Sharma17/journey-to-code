@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Website</title>
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo">
+        </div>
+        <ul class="menu-items">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="assignment-home.html">Task</a></li>
+            <li><a href="Guide.html">Guide</a></li>
+            <li><a href="setting.html">Settings</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to <span>Journey to Code</span></h1>
+            <p>Your one-stop platform to learn coding and build projects!</p>
+        </div>
+    </header>
+
+    <!-- Our Courses Section -->
+    <section class="our-courses">
+        <h2>Our Courses</h2>
+        <div class="course-container">
+            <div class="course-item">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Learn the basics of web structure with HTML.</p>
+                <a href="html.html">Explore</a>
+            </div>
+            <div class="course-item">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Style your websites with advanced CSS techniques.</p>
+                <a href="css.html">Explore</a>
+            </div>
+            <div class="course-item">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+                <p>Make your sites interactive with JavaScript.</p>
+                <a href="js.html">Explore</a>
+            </div>
+            <div class="course-item">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>Learn Python for web development and data science.</p>
+                <a href="py.html">Explore</a>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+     <div class="about-container">
+         <div class="about-logo">
+             <img src="logo.jpeg" alt="Journey to Code Logo">
+         </div>
+         <div class="about-text">
+             <h2>About Journey to Code</h2>
+             <p>Journey to Code is an innovative platform designed to make learning programming languages fun and accessible for everyone. Our mission is to turn beginners into confident coders through interactive tutorials, engaging quizzes, and hands-on projects. Explore HTML, CSS, JavaScript, Python, and more, and start your journey towards a successful tech career today.</p>
+             <a href="#" class="learn-more-btn">Learn More</a>
+         </div>
+     </div>
+ </section>
+ <!-- quize part -->
+<section class="quizzes">
+     <h2>Test Your Knowledge</h2>
+     <div class="quiz-container">
+          <div class="quiz-item">
+              <h3>HTML Quiz</h3>
+              <button onclick="window.location.href='level-html.html'">Start Quiz</button>
+             </div>
+             <div class="quiz-item">
+                 <h3>CSS Quiz</h3>
+                 <button onclick="window.location.href='level-css.html'">Start Quiz</button>
+             </div>
+             <div class="quiz-item">
+                 <h3>JavaScript Quiz</h3>
+                 <button onclick="window.location.href='level-js.html'">Start Quiz</button>
+             </div>
+             <div class="quiz-item">
+                 <h3>Python Quiz</h3>
+                 <button onclick="window.location.href='level-python.html'">Start Quiz</button>
+             </div>
+         </div>
+     </section>
+</section>
+<!-- footer section-->
+<footer class="footer">
+     <div class="footer-container">
+         <div class="footer-logo">
+             <img src="logo.jpeg" alt="Journey to Code Logo" width="80">
+         </div>
+         <div class="footer-links">
+             <a href="#">Home</a>
+             <a href="#">About</a>
+             <a href="#">Courses</a>
+             <a href="#">Contact</a>
+         </div>
+         <div class="footer-social">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+             <a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+         <p>&copy; 2024 Journey to Code. All Rights Reserved.</p>
+     </div>
+ </footer>
+ 
+
+    <script>
+        // GSAP Animation for header text
+        gsap.from(".header h1 span", {
+            opacity: 0,
+            y: 50,
+            duration: 1.5,
+            ease: "power4.out",
+        });
+
+        gsap.from(".header p", {
+            opacity: 0,
+            y: 30,
+            duration: 1.2,
+            delay: 0.5,
+            ease: "power4.out",
+        });
+    </script>
+    <style>
+     /* General Reset */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: 'Poppins', sans-serif;
+     background: linear-gradient(135deg, #1e90ff, #ff6ec4);
+     color: #333;
+     line-height: 1.6;
+ }
+ 
+ /* Navbar */
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 50px;
+     background-color: rgba(0, 0, 0, 0.7);
+ }
+ 
+ .navbar .logo img {
+     width: 60px;
+ }
+ 
+ .menu-items {
+     display: flex;
+     gap: 20px;
+ }
+ 
+ .menu-items a {
+     color: white;
+     text-decoration: none;
+     font-size: 18px;
+     padding: 5px 10px;
+     border-radius: 5px;
+     transition: background 0.3s, color 0.3s;
+ }
+ 
+ .menu-items a:hover {
+     background: white;
+     color: black;
+ }
+ 
+ 
+ /* Header */
+ .header {
+     text-align: center;
+     color: white;
+     padding: 80px 20px;
+     background: linear-gradient(135deg, #1e90ff, #ff758c);
+ }
+ 
+ .header h1 span {
+     color: #ff6ec4;
+ }
+ 
+ .header p {
+     font-size: 18px;
+     margin-top: 10px;
+ }
+ /* course section*/
+.our-courses {
+     padding: 50px 20px;
+     background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+     color: #333;
+     text-align: center;
+ }
+ 
+ .course-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+ }
+ 
+ .course-item {
+     background: white;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     padding: 20px;
+     width: 22%;
+     text-align: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .course-item:hover {
+     transform: scale(1.05);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .course-item a {
+     text-decoration: none;
+     color: #ff758c;
+     font-weight: bold;
+     transition: color 0.3s ease;
+ }
+ 
+ .course-item a:hover {
+     color: #333;
+ }
+ /*about section*/
+ .about {
+     background: linear-gradient(135deg, hsl(350, 52%, 65%), #ff7eb3);
+     padding: 60px 20px;
+     color: white;
+     text-align: center;
+     border-radius: 20px;
+     margin: 50px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .about-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+ 
+ .about-logo img {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     border: 3px solid white;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .about-text h2 {
+     font-size: 36px;
+     margin-bottom: 20px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .about-text p {
+     font-size: 18px;
+     line-height: 1.8;
+     max-width: 800px;
+     margin: 0 auto;
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .learn-more-btn {
+     display: inline-block;
+     background-color: white;
+     color: #ff758c;
+     padding: 10px 20px;
+     margin-top: 20px;
+     border-radius: 25px;
+     font-size: 16px;
+     font-weight: bold;
+     text-decoration: none;
+     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+ }
+ 
+ .learn-more-btn:hover {
+     background-color: #ff7eb3;
+     color: white;
+     transform: translateY(-5px);
+ }
+ 
+ /*Quize part*/
+ quizzes {
+     padding: 30px;
+     background-color: #fff;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     margin: 20px;
+     border-radius: 10px;
+ }
+ 
+ .quizzes h2 {
+     text-align: center;
+     color: #2C3E50;
+     margin-bottom: 20px;
+ }
+ 
+ .quiz-container {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+ 
+ .quiz-item {
+     background-color: #2ecc71;
+     color: white;
+     padding: 20px;
+     border-radius: 8px;
+     width: 200px;
+     text-align: center;
+     margin: 10px;
+     transition: transform 0.2s;
+ }
+ 
+ .quiz-item:hover {
+     transform: translateY(-5px);
+ }
+ 
+ .quiz-item button {
+     background-color: #e74c3c;
+     border: none;
+     color: white;
+     padding: 10px;
+     font-size: 14px;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ 
+ .quiz-item button:hover {
+     background-color: #c0392b;
+ }
+
+ 
+ 
+ .footer {
+     background-color: #2c3e50;
+     color: #fff;
+     padding: 20px 10px;
+     text-align: center;
+     font-size: 14px;
+ }
+ 
+ .footer-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+ }
+ 
+ .footer-logo img {
+     width: 50px;
+     height: 50px;
+     margin-bottom: 10px;
+ }
+ 
+ .footer-links {
+     display: flex;
+     gap: 15px;
+ }
+ 
+ .footer-links a {
+     color: #fff;
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 14px;
+     transition: color 0.3s;
+ }
+ 
+ .footer-links a:hover {
+     color: #3498db;
+ }
+ 
+ .footer-social {
+     display: flex;
+     gap: 10px;
+     font-size: 18px;
+ }
+ 
+ .footer-social a {
+     color: #fff;
+     transition: color 0.3s;
+ }
+ 
+ .footer-social a:hover {
+     color: #3498db;
+ }
+ 
+ .footer p {
+     margin: 10px 0 0;
+     opacity: 0.8;
+ }
+ 
+  </style>
+</body>
+</html>
