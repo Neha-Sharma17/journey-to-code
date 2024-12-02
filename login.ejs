@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="stylelogi.css">
+     <title>Journey To Code</title>
+     <link rel="stylesheet" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        .error-message {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 5px;
+        }
+     </style>
+</head>
+<body>
+     <div class="box">
+          <div class="container">
+               <div class="top-header">
+                    <span>Have An Account?</span>
+                    <header>Log In</header>
+               </div>
+               <form id="loginForm" action="dashboard.html" method="post">
+               <div class="input-field">
+                    <input type="text" id="username" class="input" placeholder="Username" required> 
+               </div>
+               <div class="input-field">
+                    <input type="password" id="password" class="input" placeholder="Password" required>
+               </div>
+               <div class="input-field">
+                    <a href="dashboard.html"><input type="Submit" class="Submit" value="Login"></a>
+               </div>
+               <div class="bottom">
+                    <div class="left">
+                         <input type="checkbox" id="checkbox">
+                         <label for="check" required>Remember Me</label>
+                    </div>
+                    <div class="right">
+                         <label><a href="signUp.html">Forgot Password?</a></label>
+                    </div>
+               </div>
+               </form>
+          </div>
+     </div>
+
+     <script>
+         const form = document.getElementById('loginForm');
+         const username = document.getElementById('username');
+         const password = document.getElementById('password');
+         
+         form.addEventListener('submit', function(e) {
+            // Clear any previous error messages
+            const existingError = document.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+
+            // Validate if both fields are filled
+            if (username.value.trim() === '' || password.value.trim() === '') {
+                e.preventDefault();  // Prevent form submission
+
+                // Show an error message
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'Both fields are required!';
+                errorMessage.className = 'error-message';
+                form.insertBefore(errorMessage, form.firstChild);  // Show error message at the top
+            }
+         });
+     </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card with Transition Effect</title>
+  <style>
+    /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family:Arial,  sans-serif;
+    background-color:chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Card Container */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .card img {
+    width:auto;
+    height:auto;
+    object-fit:fill;
+  }
+  
+  .card h3 {
+    padding: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .card p {
+    padding: 0 10px 10px;
+    color: #666;
+  }
+  
+  .card button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color:blue;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #ff5733;
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    background-color: #fafafa; /* Slight background color change */
+  }
+  center,font ,  strong{
+    
+    padding-top: 20px;
+  }
+  
+    button{
+        margin-left: 0px;
+        margin-top: 0px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color:goldenrod;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <img src="medium1.jpeg" alt="Card Image">
+      <h3>LEVEL-1 Easy</h3>
+      <p>It is the level1 of the HTML quiz with the help of which you can start fron easy and to proceed towards advance.</p>
+      <button onclick="window.location.href='html-quiz.html'">START</button>
+    </div>
+    <div class="card">
+      <img src="easy.jpeg" alt="Card Image">
+      <h3>LEVEL-2 Medium</h3>
+      <p>Now you reach level2 of HTML and you have basic knowledge so move towards hard.</p>
+      <button onclick="window.location.href='html-level2.html'">START</button>
+      <center><font size="10px" color="red"><strong>G</strong>ood</font></center>
+    </div>
+    <div class="card">
+      <img src="hard.png" style="width: 300px;" alt="Card Image">
+      <h3>Level-3 Hard</h3>
+      <p>Congratulates you are at the hard level of HTML with you can bost your memory.</p>
+      <button onclick="window.location.href='html-level3.html'">START</button>
+      <center><font size="10px" color="red"><strong>E</strong>xcellent</font></center>
+    </div>
+  </div>
+  <button onclick="window.location.href='dashboard.html'"><font size="40px" color="red">Back</font></button>
+</body>
+</html>
